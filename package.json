@@ -1,0 +1,20 @@
+{
+  "name": "bonus-terms-calculator",
+  "version": "1.0.0",
+  "description": "Dependency-free JavaScript library and CLI for modelling casino promotion terms.",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Asacura/bonus-terms-calculator"
+  },
+  "homepage": "https://welcomebonus.co/",
+  "exports": { ".": "./src/index.js" },
+  "bin": { "bonus-terms": "./bin/bonus-terms.js" },
+  "files": ["bin", "src", "README.md", "LICENSE"],
+  "scripts": {
+    "demo": "node ./bin/bonus-terms.js",
+    "test": "node --test"
+  },
+  "engines": { "node": ">=18" }
+}
