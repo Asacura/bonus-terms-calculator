@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Open-source calculator for comparing casino bonus terms." />
+    <title>Bonus Terms Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <p class="eyebrow">Open-source utility by WelcomeBonus.co</p>
+        <h1>Bonus Terms Calculator</h1>
+        <p class="lede">Turn headline percentages into a clearer view of wagering requirements and promotion limits.</p>
+      </section>
+
+      <section class="card calculator" aria-labelledby="calculator-title">
+        <h2 id="calculator-title">Enter the promotion terms</h2>
+        <div class="grid">
+          <label>Deposit<input id="deposit" type="number" min="0" step="0.01" value="100" /></label>
+          <label>Bonus percentage<input id="bonusPercent" type="number" min="0" step="1" value="100" /></label>
+          <label>Bonus cap <span class="optional">optional</span><input id="bonusCap" type="number" min="0" step="0.01" placeholder="No cap" /></label>
+          <label>Wagering multiplier<input id="wageringMultiplier" type="number" min="0" step="1" value="35" /></label>
+          <label>Game contribution<input id="gameContribution" type="number" min="0.01" max="100" step="1" value="100" /></label>
+          <label>Max bet <span class="optional">optional</span><input id="maxBet" type="number" min="0" step="0.01" placeholder="Not specified" /></label>
+          <label>Max cashout <span class="optional">optional</span><input id="maxCashout" type="number" min="0" step="0.01" placeholder="Not specified" /></label>
+          <label>Wagering base<select id="wageringBase"><option value="depositPlusBonus">Deposit + bonus</option><option value="bonusOnly">Bonus only</option></select></label>
+        </div>
+        <div class="results" aria-live="polite">
+          <div><span>Bonus amount</span><strong id="bonusAmount">$100.00</strong></div>
+          <div><span>Wagering target</span><strong id="wageringTarget">$7,000.00</strong></div>
+          <div><span>Contribution-adjusted target</span><strong id="adjustedTarget">$7,000.00</strong></div>
+        </div>
+        <p class="note">This is a transparent estimate for comparing terms. It does not predict outcomes or constitute financial or gambling advice.</p>
+      </section>
+
+      <footer><a href="https://welcomebonus.co/">WelcomeBonus.co</a> · <a href="https://github.com/Asacura/bonus-terms-calculator">Source on GitHub</a></footer>
+    </main>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
